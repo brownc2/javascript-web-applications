@@ -1,7 +1,11 @@
-const NoteModel = require('./model.js')
+const NotesModel = require("./notesmodel");
+const NotesView = require("./notesview");
 
-console.log('The notepad app is running')
+const model = new NotesModel();
+model.addNote('This is an example note');
 
-notemodel = new NoteModel
-console.log(notemodel.getNotes())
+
+const view = new NotesView(model);
+
+view.displayNotes();
 
